@@ -1,0 +1,165 @@
+/* General App styling */
+.App {
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+  position: relative; /* For absolute positioning of blur */
+}
+
+/* Styling the header */
+.header {
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between; /* Space between title and search bar */
+  align-items: center; /* Center vertically */
+}
+
+h1 {
+  color: #4CAF50;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Add Recipe button styling */
+.add-recipe {
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+.add-recipe-button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px; /* Space between button and search bar */
+}
+
+/* Search bar styling */
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 200px; /* Adjust width as needed */
+}
+
+/* Recipe grid to display three items per row */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px;
+  padding: 0 20px;
+}
+
+/* Recipe card styling */
+.recipe {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 320px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.recipe:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Recipe image styling */
+.recipe-image {
+  width: 100%;
+  height: auto; /* Ensures images keep their aspect ratio */
+  max-height: 180px; /* Limit the height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 8px;
+  margin-bottom: 0px;
+}
+
+/* Recipe title styling */
+.recipe-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 8px; /* Closer to the image */
+  margin-bottom: 0;
+}
+
+/* Styling for the recipe details */
+.recipe-details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Sit on top of other content */
+  backdrop-filter: blur(5px); /* Apply blur to background */
+}
+
+.recipe-details {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px; /* Limit the width */
+  max-height: 80%; /* Limit the height */
+  overflow-y: auto; /* Allow vertical scrolling for long content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative; /* Keep it positioned relative to the overlay */
+}
+
+.close-button {
+  position: absolute; /* Positioning the close button */
+  top: 10px;
+  right: 10px;
+  background-color: #ff5c5c; /* Red background */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Recipe image styling for details */
+.recipe-details-image {
+  width: 100%;
+  height: auto; /* Ensures images keep their aspect ratio */
+  border-radius: 8px;
+  margin-bottom: 20px; /* Space below the image */
+}
+
+/* Recipe form overlay */
+.recipe-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Sit on top of other content */
+}
+
+.recipe-form {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 500px; /* Maximum width */
+  position: relative;
+}
